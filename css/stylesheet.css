@@ -1,0 +1,331 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.cv-container {
+  max-width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding: 1.5em;
+  padding-top: 0;
+}
+
+header {
+  background-image: url("/image/background.jpeg");
+  background-position: center;
+  background-size: 100%;
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  gap: 1em;
+  padding: 1em;
+  margin-top: 0;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  column-gap: 2em;
+  width: 80%;
+  padding-left: 1em;
+
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 20%;
+  color: blanchedalmond;
+}
+
+.profile-pic {
+  width: 10em;
+  border: 2px solid #7c3aed;
+  object-fit: cover;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #dfdada;
+}
+
+header h2 {
+  margin: 5px 0 10px;
+  font-weight: normal;
+  color: #a7a3a3;
+  font-size: 1.2rem;
+}
+
+header p,
+header a {
+  margin: 2px 0;
+  font-size: 0.95rem;
+  color: #b9a9a9;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.section-title {
+  color: #7c3aed;
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.job, .edu, .cert {
+  margin-bottom: 20px;
+}
+
+.job h4, .edu h4, .cert h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.job-dates {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5em;
+}
+
+.skills-grid ul {
+  margin: 0;
+}
+
+.skills-grid li {
+  margin-bottom: 8px;
+}
+
+.hobbies-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.hobbies-list li {
+  background-color: #ede9fe;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #4b0082;
+}
+
+footer {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+  text-align: center;
+  background-image: url("/image/background.jpeg");
+  background-position: center;
+  background-size: 100%;
+  padding: 0.5em;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.footerImages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5em;
+  width: 100%;
+}
+
+#details {
+  width: 3.5rem;
+  height: auto;
+  border: 2.5px solid rgb(24, 23, 23);
+  border-radius: 100%;
+}
+
+/* The animation code */
+@keyframes animatedRotate {
+  0% {
+    filter: invert(0%);
+    border-radius: 100%;
+  }
+
+  25% {
+    filter: invert(50%);
+    transform: rotate(90deg);
+    border-radius: 0%;
+  }
+
+  50% {
+    filter: invert(100%);
+    transform: rotate(180deg);
+    border-radius: 100%;
+  }
+
+  75% {
+    filter: invert(50%);
+    transform: rotate(270deg);
+    border-radius: 0%;
+  }
+
+  100% {
+    filter: invert(0%);
+    transform: rotate(360deg);
+    border-radius: 100%;
+  }
+}
+
+/* The element to apply the animation to */
+#details:hover {
+  width: 3.5rem;
+  height: 3.5rem;
+  animation-name: animatedRotate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+/* Responsive */
+/* === Tablets (≤ 992px) === */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-left, .header-right {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-left {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .footerImages {
+    gap: 3em;
+  }
+
+  #details {
+    width: 3rem;
+  }
+}
+
+/* === Phones (≤ 768px) === */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic {
+    height: 5em;
+    width: 5em;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .hobbies-list {
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .footerImages {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  #details {
+    width: 2.5rem;
+  }
+}
+
+/* === Very Small Devices (≤ 480px) === */
+@media (max-width: 480px) {
+  body {
+    padding: 0.5em;
+  }
+
+  .cv-container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header h2 {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .job h4, .edu h4, .cert h4 {
+    font-size: 1rem;
+  }
+
+  .profile-pic {
+    height: 4em;
+    width: 4em;
+  }
+
+  .footerImages {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  #details {
+    width: 2.2rem;
+  }
+}
