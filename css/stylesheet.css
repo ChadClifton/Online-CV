@@ -18,7 +18,7 @@ body {
 }
 
 header {
-  background-image: url("./image/background.jpeg");
+  background-image: url("../image/background.jpeg");
   background-position: center;
   background-size: 100%;
   display: flex;
@@ -143,7 +143,7 @@ footer {
   border-bottom: 2px solid #ccc;
   border-top: 2px solid #ccc;
   text-align: center;
-  background-image: url("/image/background.jpeg");
+  background-image: url("../image/background.jpeg");
   background-position: center;
   background-size: 100%;
   padding: 0.5em;
