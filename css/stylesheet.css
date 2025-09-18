@@ -36,7 +36,6 @@ header {
   column-gap: 2em;
   width: 80%;
   padding-left: 1em;
-
 }
 
 .header-text {
@@ -93,11 +92,11 @@ header a:hover {
   padding-top: 15px;
 }
 
-.job, .edu, .cert {
+.job, .edu {
   margin-bottom: 20px;
 }
 
-.job h4, .edu h4, .cert h4 {
+.job h4, .edu h4 {
   margin: 0;
   font-size: 1.1rem;
 }
@@ -108,18 +107,124 @@ header a:hover {
   margin-bottom: 10px;
 }
 
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5em;
+.edu h5 {
+  margin: 10px 0 5px 0;
+  font-size: 1rem;
+  color: #7c3aed;
+  font-style: italic;
 }
 
-.skills-grid ul {
+.edu-section {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.edu {
+  flex: 1;
+  padding-right: 0;
+}
+
+
+.coursework {
+  flex: 1;
+}
+
+.coursework h5 {
+  margin: 10px 0 5px 0;
+  font-size: 1rem;
+  color: #7c3aed;
+  font-style: italic;
+}
+
+.coursework ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.coursework {
+  display: flex;
+  flex-direction: column;
+}
+
+.coursework-lists {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+
+.skills-technical,
+.skills-soft {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.skills-technical h4,
+.skills-soft h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #7c3aed;
+}
+
+.skills-section {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.skills-technical ul,
+.skills-soft ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.skills-technical li,
+.skills-soft li {
+  margin-bottom: 8px;
+}
+
+.skills-technical li {
+  font-weight: bold;
+}
+
+.soft-skills-lists {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap; /* ensures stacking on smaller screens */
+}
+
+.skills-soft ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-.skills-grid li {
-  margin-bottom: 8px;
+.projects-list li {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #7c3aed;
+  border-radius: 4px;
+}
+
+.projects-list strong {
+  color: #7c3aed;
+}
+
+.projects-list a {
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projects-list a:hover {
+  text-decoration: underline;
 }
 
 .hobbies-list {
@@ -228,7 +333,7 @@ footer {
     gap: 1em;
   }
 
-  .skills-grid {
+  .skills-section {
     flex-direction: column;
     gap: 1em;
   }
@@ -239,6 +344,10 @@ footer {
 
   #details {
     width: 3rem;
+  }
+
+  .edu-section {
+    flex-direction: column;
   }
 }
 
@@ -263,7 +372,7 @@ footer {
     font-size: 1rem;
   }
 
-  .skills-grid {
+  .skills-section {
     flex-direction: column;
     gap: 1em;
   }
@@ -311,7 +420,7 @@ footer {
     font-size: 1.1rem;
   }
 
-  .job h4, .edu h4, .cert h4 {
+  .job h4, .edu h4 {
     font-size: 1rem;
   }
 
